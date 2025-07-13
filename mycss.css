@@ -1,0 +1,75 @@
+BODY { 
+background: gray;
+background-image:url(123.gif);
+background-repeat:no-repeat;
+background-size: 780px 950px;
+background-position: 293px -87px;
+}
+
+.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 , .tile10 , .tile11 , .tile12 , .tile13 , .tile14 , .tile15 , .tile16 {
+  display: table-cell;
+  width: 90px;
+  height: 90px;
+  border: 1px solid white;
+  background: url("meme3.gif"); 
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+
+.tile1 {background-position: 0px 0px;}
+
+.tile2 {background-position: -90px 0px;}
+
+.tile3 {background-position: -180px 0px;}
+
+.tile4 {background-position: -270px 0px;}
+
+.tile5 {background-position: 0px -90px;}
+
+.tile6 {background-position: -90px -90px;}
+
+.tile7 {background-position: -180px -90px;}
+
+.tile8 {background-position: -270px -90px;}
+
+.tile9 {background-position: 0px -180px;}
+
+.tile10 {background-position: -90px -180px;}
+
+.tile11 {background-position: -180px -180px;}
+
+.tile12 {background-position: -270px -180px;}
+
+.tile13 {background-position: 0px -270px;}
+
+.tile14 {background-position: -90px -270px;}
+
+.tile15 {background-position: -180px -270px;}
+
+.tile16 {background: white; cursor: default;}
+
+#
+
+.winner{
+  font-family:arial;
+  color: #fff;
+  text-align: center;
+  font-size: 4vw;
+  z-index: 100;
+  width:100%;
+  height:2em;
+  position:absolute;
+  top:calc(50% - 1em);
+  line-height: 2em;
+  background: red;
+  transform:scale(0);
+  
+.tile1:checked ~ #a-left:checked ~ #b-up:checked ~ #b-center:checked ~ #c-up:checked ~ #c-right:checked ~ #d-middle:checked ~ #d-left:checked ~ #e-middle:checked ~ #e-center:checked ~ #f-middle:checked ~ #f-right:checked ~ #g-down:checked ~ #g-left:checked ~ #h-down:checked ~ #h-center:checked ~ .winner{
+  animation:winner 3s 1 1s;
+}
+@keyframes winner{
+  0%,100%{transform:scale(0);}
+  10%,90%{transform:scale(1);}
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="device-width, initial-scale=1.0">
+		<title>Logic Puzzle</title>
+		<link rel="stylesheet" href="mycss3.css">
+		<script src="mycss3.js"></script>
+	</head>
+		
+		<style>
+			@font-face {
+			  font-family: ArcadeClassic;
+			  src: url(ArcadeClassic.ttf);
+			}
+		
+			.goods {
+				font-family: ArcadeClassic;
+				background-color: gray;
+				color: black;
+			
+			}
+			
+			.button1 {
+			font-family: ArcadeClassic;
+			margin-top: 128px;
+			margin-left: 0px;
+			padding-left: 30px;
+			padding-right: 30px;
+			font-size: 20px;
+			}
+			
+			.count {
+			font-family: ArcadeClassic;
+			border-color: black;
+			padding-top: 18px;
+			padding-bottom: 22px;
+			padding-left: 30px;
+			padding-right: 30px;
+			color: black;
+			margin-top: 11px;
+			font-size: 20px;
+			}
+			
+
+		
+		</style>
+		
+	<body>
+		<center>
+		<h1 class="goods"><a href="mypz3x3.html">C l i c k ! P u z z l e</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mypz.html" target="_blank">N E X T L E V E L</a></h1><div id="table" style="display: table;">
+		  <div id="row1" style="display: table-row;">
+			  <div id="cell11" class="tile1" onClick="clickTile(1,1);" checked></div>
+			  <div id="cell12" class="tile2" onClick="clickTile(1,2);" checked></div>
+			  <div id="cell13" class="tile3" onClick="clickTile(1,3);" checked></div>		  
+		   </div>
+		   <div id="row2" style="display: table-row;">
+			  <div id="cell21" class="tile4" onClick="clickTile(2,1);" checked></div>
+			  <div id="cell22" class="tile5" onClick="clickTile(2,2);" checked></div>
+			  <div id="cell23" class="tile6" onClick="clickTile(2,3);" checked></div>
+		   </div>
+		   <div id="row3" style="display: table-row;">
+			  <div id="cell31" class="tile7" onClick="clickTile(3,1);" checked></div>
+			  <div id="cell32" class="tile8" onClick="clickTile(3,2);" checked></div>
+			  <div id="cell33" class="tile9" onClick="clickTile(3,3);" checked></div>
+		   </div>
+		</div>  
+		</center>	
+		
+		<div class="winner">WINNER!</div>
+		
+		<center>
+		<button id="gameStart" class="button1" onClick="shuffle();play();sample();">New Game</button>
+		</center>
+		<center>
+		<button class="count" id="countdown">120 seconds</button>
+		<div id= "startButtons">
+		<audio id="audio" src="music1.mp3"></audio>
+		<audio id="audio2" src="gameover.wav"><
+		</center>
+		
+		
+		   <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+		
+	<script>
+
+		var timeleft = 120;
+		function sample() {
+		var downloadTimer = setInterval(function 
+		   function1(){ 
+		document.getElementById("countdown").innerHTML = timeleft + "&nbsp"+"seconds";
+
+		timeleft -= 1;
+		if(timeleft <= 0){
+			clearInterval(downloadTimer);
+
+		document.getElementById("countdown").innerHTML = "Time is up!"
+		  }
+		}, 1000);
+
+			console.log(countdown)
+			
+		}
+		
+
+	</script>		
+
+		
+	</body>
+</html>
